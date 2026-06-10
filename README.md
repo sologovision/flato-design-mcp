@@ -128,6 +128,14 @@ project.
 
 ![Flato canvas editing and content tools](assets/screenshots/flato-canvas-2.png)
 
+### AI-assisted canvas edits
+
+![AI-assisted edits in the Flato canvas](assets/screenshots/flato-canvas-3.png)
+
+### Codex working with the live canvas
+
+![Codex working with the live Flato canvas](assets/screenshots/flato-canvas-4-withCodex.png)
+
 ## Release Assets
 
 GitHub releases attach:
