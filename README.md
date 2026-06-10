@@ -120,8 +120,13 @@ project.
 
 ![Read-only MCP smoke test passed](assets/screenshots/flato-whoami-smoke-test.png)
 
-Canvas and presentation-result screenshots will be added after selecting a
-public-safe Flato project example.
+### Editable presentation canvas
+
+![Editable presentation canvas in Flato](assets/screenshots/flato-canvas-1.png)
+
+### Canvas editing and content tools
+
+![Flato canvas editing and content tools](assets/screenshots/flato-canvas-2.png)
 
 ## Release Assets
 
