@@ -1,0 +1,20 @@
+{
+  "name": "flato-design-mcp",
+  "interface": {
+    "displayName": "Flato Design MCP"
+  },
+  "plugins": [
+    {
+      "name": "flato-design-mcp-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/flato-design-mcp-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

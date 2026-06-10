@@ -1,0 +1,22 @@
+{
+  "name": "flato-design-mcp",
+  "displayName": "Flato Design MCP",
+  "description": "Connect AI agents to Flato's editable design canvas through a hosted Streamable HTTP MCP server.",
+  "homepage": "https://www.flato.ai",
+  "documentation": "https://www.flato.ai/docs/mcp",
+  "agentGuide": "https://www.flato.ai/docs/mcp.md",
+  "transport": "streamable-http",
+  "url": "https://api.flato.ai/api/mcp/editor",
+  "auth": "oauth",
+  "categories": [
+    "design",
+    "presentation",
+    "productivity"
+  ],
+  "capabilities": [
+    "read-design-context",
+    "write-design-projects",
+    "export-images",
+    "visual-qa"
+  ]
+}

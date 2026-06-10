@@ -1,0 +1,27 @@
+{
+  "name": "flato-design-mcp-codex",
+  "version": "0.1.0",
+  "description": "Connect Codex to Flato Design MCP and guide reliable editing of Flato's editable design canvas.",
+  "author": {
+    "name": "Flato"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Flato Design MCP",
+    "shortDescription": "Use Codex to create, inspect, revise, export, and QA editable Flato designs.",
+    "longDescription": "Installs the Flato Design MCP server configuration and a workflow skill that teaches Codex how to authorize Flato, choose a project, read design context, use explicit page and block ids, apply edits, inspect MCP feedback, and verify rendered output.",
+    "developerName": "Flato",
+    "category": "Productivity",
+    "capabilities": [
+      "MCP",
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Flato Design MCP to inspect and edit this design.",
+      "Create a new editable Flato design through MCP.",
+      "Revise the selected Flato block safely."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
