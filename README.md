@@ -106,6 +106,23 @@ An independent Codex CLI session successfully called `flato_whoami` through the
 installed `flato-editor` MCP server without creating or editing any Flato
 project.
 
+## Screenshots
+
+### GitHub release
+
+![Flato Design MCP v0.1.0 GitHub release](assets/screenshots/github-release-v0.1.0.png)
+
+### Codex plugin install
+
+![Codex plugin install verified](assets/screenshots/codex-install-success.png)
+
+### Read-only MCP smoke test
+
+![Read-only MCP smoke test passed](assets/screenshots/flato-whoami-smoke-test.png)
+
+Canvas and presentation-result screenshots will be added after selecting a
+public-safe Flato project example.
+
 ## Release Assets
 
 GitHub releases attach:
