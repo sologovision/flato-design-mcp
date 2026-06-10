@@ -1,65 +1,86 @@
 # Flato Design MCP
 
-Official MCP package for connecting AI agents to Flato's editable design
-canvas.
+Connect AI agents to Flato's editable design canvas with MCP.
 
 Flato Design MCP lets Codex, Claude Code, Cursor, and other MCP-capable agents
-create, inspect, revise, export, and QA editable Flato design projects.
-
-## What This Repo Contains
-
-- `skills/flato-design-mcp-guide`: installable base guide skill for agents.
-- `plugins/flato-design-mcp-codex`: Codex plugin package with MCP config and
-  the guide skill.
-- `docs/`: setup, OAuth, permissions, and troubleshooting notes.
-- `registry/`: registry and platform review metadata drafts.
-- `examples/prompts/`: first workflow prompts for testing the integration.
-
-This repo does not contain the Flato MCP server source code. The hosted MCP
-server is:
+create, inspect, revise, export, and QA editable Flato design projects. Agents
+work through the hosted Flato MCP server while users keep full access to the
+live browser editor.
 
 ```text
 https://api.flato.ai/api/mcp/editor
 ```
 
-## Install Paths
+This repository is the official distribution package for setup docs, the base
+guide skill, Codex plugin packaging, examples, and registry/review metadata. It
+does not contain the Flato MCP server source code.
 
-### Codex
+## What's Included
 
-Install the Codex plugin package from:
+- `skills/flato-design-mcp-guide`: installable base guide skill for agents.
+- `plugins/flato-design-mcp-codex`: Codex plugin package with MCP config and the
+  guide skill.
+- `.agents/plugins/marketplace.json`: Codex marketplace descriptor for this
+  repo.
+- `docs/`: setup, OAuth, permissions, and troubleshooting notes.
+- `registry/`: MCP registry and platform review metadata drafts.
+- `examples/prompts/`: first prompts for testing the integration.
 
-```text
-plugins/flato-design-mcp-codex
+## Codex Install
+
+Codex can install this repo as a plugin marketplace:
+
+```bash
+codex plugin marketplace add sologovision/flato-design-mcp --ref main
+codex plugin add flato-design-mcp-codex@flato-design-mcp
+codex mcp login flato-editor
 ```
 
-The plugin bundles:
+Then open a new Codex conversation and verify:
 
-- `.mcp.json`, pointing to the hosted Flato MCP server.
-- `flato-design-mcp-guide`, the base workflow skill.
-- Plugin metadata for Codex discovery and review.
+```text
+Use Flato Design MCP. Call flato_whoami first and report the result. Do not create, edit, or write any project.
+```
 
 See [Codex setup](docs/setup-codex.md).
 
-### Claude Code
+## Claude Code Install
 
-Add the hosted Flato MCP server, then use the guide skill in this repo:
+Add the hosted Flato MCP server:
 
 ```bash
 claude mcp add --transport http flato-editor https://api.flato.ai/api/mcp/editor
 ```
 
+Then use the guide skill in `skills/flato-design-mcp-guide`.
+
 See [Claude Code setup](docs/setup-claude-code.md).
 
-### Cursor And Other MCP Clients
+## Cursor And Other MCP Clients
 
-Use the hosted MCP server URL and follow the same operating rules from the guide
-skill.
+Use the hosted MCP server URL:
+
+```text
+https://api.flato.ai/api/mcp/editor
+```
+
+Then follow the workflow in `skills/flato-design-mcp-guide/SKILL.md`.
 
 See [Cursor setup](docs/setup-cursor.md).
 
-## First Workflow
+## OAuth
 
-After connecting Flato MCP, an agent should follow this sequence:
+Flato Design MCP uses browser OAuth. If needed, Flato asks you to sign in or
+create an account before authorization.
+
+Do not paste Flato passwords, bearer tokens, refresh tokens, or local OAuth
+cache contents into an agent conversation.
+
+See [Authentication](docs/authentication.md).
+
+## First Agent Workflow
+
+After connecting Flato MCP, an agent should:
 
 1. Call `flato_whoami`.
 2. Create or select a project with `flato_create_project`,
@@ -70,6 +91,27 @@ After connecting Flato MCP, an agent should follow this sequence:
 6. Use concrete page and block ids returned by fresh context reads.
 7. Inspect `mcpFeedback` after writes.
 8. Export and visually QA important results.
+
+## Verified Smoke Test
+
+The v0.1.0 Codex path has been verified with:
+
+```bash
+codex plugin marketplace add sologovision/flato-design-mcp --ref main
+codex plugin add flato-design-mcp-codex@flato-design-mcp
+codex mcp login flato-editor
+```
+
+An independent Codex CLI session successfully called `flato_whoami` through the
+installed `flato-editor` MCP server without creating or editing any Flato
+project.
+
+## Release Assets
+
+GitHub releases attach:
+
+- `flato-design-mcp-guide-v0.1.0.zip`: installable base guide skill.
+- `flato-design-mcp-codex-v0.1.0.zip`: Codex plugin package.
 
 ## Safety Principles
 
@@ -85,6 +127,14 @@ After connecting Flato MCP, an agent should follow this sequence:
 - User docs: https://www.flato.ai/docs/mcp
 - Agent-readable guide: https://www.flato.ai/docs/mcp.md
 - Flato app: https://www.flato.ai
+- Privacy: https://www.flato.ai/docs/privacy-policy
+- Terms: https://www.flato.ai/docs/terms-of-use
+
+## Support And Security
+
+- Use GitHub Issues for setup and documentation problems.
+- See [SECURITY.md](SECURITY.md) for security reporting guidance.
+- Do not include tokens, passwords, or private project content in public issues.
 
 ## Roadmap
 
