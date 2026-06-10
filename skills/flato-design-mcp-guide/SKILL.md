@@ -13,6 +13,15 @@ resources, prompts, project targeting, image capabilities, and feedback. It is
 not a hidden one-shot design agent. The agent must read current Flato context
 explicitly and then call concrete MCP tools.
 
+## Account And Plan Boundaries
+
+A Flato account is required for OAuth. A paid Flato subscription is not required
+to install, connect, or start using Flato Design MCP.
+
+Do not tell users they must subscribe before connecting. If an MCP response says
+a feature is limited by plan, usage, export, workspace, or credits, report that
+specific limitation and suggest the next available path.
+
 ## Required Bootstrap
 
 Before any design write:

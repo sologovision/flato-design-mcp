@@ -23,3 +23,7 @@ Typical write tools include:
 
 Image generation or editing features may consume the authenticated Flato user's
 credits when those tools are available and used.
+
+A paid Flato subscription is not required to connect or start using Flato Design
+MCP. If a tool is limited by plan, usage, export, workspace, or credit rules, the
+MCP response should surface that specific limitation.

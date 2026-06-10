@@ -8,6 +8,11 @@ description: Use when creating, editing, inspecting, exporting, or troubleshooti
 Use this skill whenever the user wants Codex to operate a Flato design through
 MCP.
 
+A Flato account is required for OAuth. A paid Flato subscription is not required
+to install, connect, or start using Flato Design MCP. If MCP reports a plan,
+usage, export, workspace, or credit limit, explain that specific limitation
+instead of asking users to subscribe in advance.
+
 Before any design write:
 
 1. Read Flato MCP resources when available.

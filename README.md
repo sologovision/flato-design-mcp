@@ -78,6 +78,16 @@ cache contents into an agent conversation.
 
 See [Authentication](docs/authentication.md).
 
+## Account And Subscription
+
+A Flato account is required for OAuth. A paid Flato subscription is not required
+to install, connect, or start using Flato Design MCP.
+
+Some features, exports, higher usage, team/workspace capabilities, or paid image
+generation and editing may still depend on the authenticated user's Flato plan
+or credits. Agents should report plan or credit errors from MCP instead of
+asking users to subscribe in advance.
+
 ## First Agent Workflow
 
 After connecting Flato MCP, an agent should:
