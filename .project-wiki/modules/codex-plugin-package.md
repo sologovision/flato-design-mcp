@@ -19,7 +19,7 @@ The Codex plugin package lives at `plugins/flato-design-mcp-codex/`.
 The plugin manifest declares:
 
 - plugin name: `flato-design-mcp-codex`
-- version: `0.1.0`
+- version: `0.1.3`
 - skills directory: `./skills/`
 - MCP server config: `./.mcp.json`
 - display name: `Flato Design MCP`

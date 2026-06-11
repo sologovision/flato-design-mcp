@@ -130,7 +130,10 @@ include click/tap behavior or a visible fallback when mobile touch users matter.
 
 ## Verified Smoke Test
 
-The v0.1.0 Codex path has been verified with:
+The v0.1.3 Codex plugin package uses the full guide skill and the current
+hosted Flato MCP contract.
+
+The Codex install path has been verified with:
 
 ```bash
 codex plugin marketplace add sologovision/flato-design-mcp --ref main
@@ -146,7 +149,7 @@ project.
 
 ### GitHub release
 
-![Flato Design MCP v0.1.0 GitHub release](assets/screenshots/github-release-v0.1.0.png)
+![Flato Design MCP GitHub release page](assets/screenshots/github-release-v0.1.0.png)
 
 ### Codex plugin install
 

@@ -11,3 +11,5 @@
   plugin guide skill in `.harness/migration-map.md`.
 - Synced the bundled Codex plugin guide to the base guide and recorded the
   byte-for-byte sync policy.
+- Prepared a follow-up version hygiene update so the Codex plugin manifest
+  version matches the next release package.
