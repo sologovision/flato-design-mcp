@@ -1,11 +1,13 @@
 # Flato Design MCP
 
-Connect AI agents to Flato's editable design canvas with MCP.
+Flato is the native canvas runtime for AI design.
 
-Flato Design MCP lets Codex, Claude Code, Cursor, and other MCP-capable agents
-create, inspect, revise, export, and QA editable Flato design projects. Agents
-work through the hosted Flato MCP server while users keep full access to the
-live browser editor.
+Flato gives AI agents a live, editable visual canvas for design work. Through
+MCP, agents can create, inspect, revise, export, and QA Flato projects while
+users keep full access to the browser editor.
+
+Flato Design MCP connects Codex, Claude Code, Cursor, and other MCP-capable
+agents to that native canvas.
 
 ```text
 https://api.flato.ai/api/mcp/editor
@@ -14,6 +16,16 @@ https://api.flato.ai/api/mcp/editor
 This repository is the official distribution package for setup docs, the base
 guide skill, Codex plugin packaging, examples, and registry/review metadata. It
 does not contain the Flato MCP server source code.
+
+## Positioning
+
+Flato is the native canvas runtime for AI design, not a one-shot image
+generator or a static HTML deck generator. The MCP workflow is built around
+editable pages, structured blocks, fresh design context, explicit page and
+block ids, live editor handoff, and visual QA.
+
+Use this package when you want an AI agent to operate Flato's editable visual
+canvas safely through MCP.
 
 ## What's Included
 

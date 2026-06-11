@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "initializedOn": "2026-06-11",
+  "status": "initialized",
+  "notes": [
+    "Initial harness and project wiki created from current repository docs.",
+    "No server-source assumptions were promoted; this repo is treated as a distribution package.",
+    "Bundled Codex plugin guide is expected to stay byte-for-byte synchronized with the base guide skill."
+  ]
+}
