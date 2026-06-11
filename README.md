@@ -97,10 +97,24 @@ After connecting Flato MCP, an agent should:
    `flato_use_project`, or `flato_use_share_link`.
 3. Open the live Flato editor when requested.
 4. Poll `flato_get_project_status` until `canWrite=true`.
-5. Call `flato_get_design_context` before any write.
-6. Use concrete page and block ids returned by fresh context reads.
-7. Inspect `mcpFeedback` after writes.
-8. Export and visually QA important results.
+5. Read `flato://canvas/fundamentals-v1`, or call
+   `flato_get_canvas_fundamentals` if resource reading is unavailable.
+6. Call `flato_get_design_context` before any write.
+7. Use concrete page and block ids returned by fresh context reads.
+8. Inspect `mcpFeedback` after writes.
+9. Export and visually QA important results.
+
+## Interactions
+
+Page-level interactions are authored through `interactiveScript` on
+`flato_create_pages` and `flato_update_pages`. Agents should rely on current
+MCP tool schemas and `flato://canvas/fundamentals-v1` for the full interaction
+contract instead of copying static schema fragments from this repo.
+
+Supported inline interaction events include click/input/change and desktop
+hover/mouse events such as `onclick`, `onmouseover`, `onmouseout`,
+`onmouseenter`, and `onmouseleave`. Hover is useful for desktop presentations;
+include click/tap behavior or a visible fallback when mobile touch users matter.
 
 ## Verified Smoke Test
 
@@ -150,8 +164,8 @@ project.
 
 GitHub releases attach:
 
-- `flato-design-mcp-guide-v0.1.0.zip`: installable base guide skill.
-- `flato-design-mcp-codex-v0.1.0.zip`: Codex plugin package.
+- `flato-design-mcp-guide-vX.Y.Z.zip`: installable base guide skill.
+- `flato-design-mcp-codex-vX.Y.Z.zip`: Codex plugin package.
 
 ## Safety Principles
 

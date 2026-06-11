@@ -27,8 +27,8 @@ specific limitation and suggest the next available path.
 Before any design write:
 
 1. Read Flato MCP resources when the host exposes resource reading.
-2. Read `flato://protocol/creative-v1`, or call
-   `flato_get_creative_protocol` as a fallback.
+2. Read `flato://canvas/fundamentals-v1`, or call
+   `flato_get_canvas_fundamentals` as a fallback.
 3. Call `flato_whoami`.
 4. Establish a target project:
    - New design: call `flato_create_project`.
@@ -72,7 +72,7 @@ are part of the operating contract.
 
 Expected resources include:
 
-- `flato://protocol/creative-v1`
+- `flato://canvas/fundamentals-v1`
 - `flato://prompt-skills`
 - `flato://prompt-skills/general-design-default`
 - `flato://prompt-skills/presentation-cover`
@@ -82,6 +82,21 @@ Expected resources include:
 
 Read brand-kit resources when the user asks for branded, marketing, sales,
 presentation, or customer-facing output.
+
+## Interaction Rules
+
+Page-level interactions are authored through `interactiveScript` on
+`flato_create_pages` and `flato_update_pages`.
+
+Rely on current MCP tool schemas and `flato://canvas/fundamentals-v1` for the
+full interaction contract. Do not duplicate or guess unsupported schema fields.
+
+Supported inline events include click/input/change and desktop hover/mouse
+events such as `onclick`, `onchange`, `oninput`, `onmouseover`, `onmouseout`,
+`onmouseenter`, and `onmouseleave`.
+
+Hover is supported for desktop experiences. Include click/tap behavior or a
+visible fallback when mobile touch users matter.
 
 ## Asset Rules
 

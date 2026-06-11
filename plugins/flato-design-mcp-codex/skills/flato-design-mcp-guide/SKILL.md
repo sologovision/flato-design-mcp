@@ -16,8 +16,8 @@ instead of asking users to subscribe in advance.
 Before any design write:
 
 1. Read Flato MCP resources when available.
-2. Read `flato://protocol/creative-v1`, or call
-   `flato_get_creative_protocol` as a fallback.
+2. Read `flato://canvas/fundamentals-v1`, or call
+   `flato_get_canvas_fundamentals` as a fallback.
 3. Call `flato_whoami`.
 4. Create or select a project with `flato_create_project`,
    `flato_use_project`, or `flato_use_share_link`.
@@ -30,6 +30,13 @@ Do not guess `pageId` or `blockId`. Use ids returned by fresh context reads.
 Use `flato_create_pages` for new pages and `flato_update_pages` for existing
 pages or blocks. Use `createBlocks` for new blocks and `updateBlocks[].blockId`
 for existing blocks.
+
+Page-level interactions are authored through `interactiveScript` on
+`flato_create_pages` and `flato_update_pages`. Rely on current tool schemas and
+`flato://canvas/fundamentals-v1` for details. Supported inline events include
+`onclick`, `onchange`, `oninput`, `onmouseover`, `onmouseout`, `onmouseenter`,
+and `onmouseleave`. Add click/tap behavior or a visible fallback when mobile
+touch users matter.
 
 Inspect `mcpFeedback` after writes. Re-read design context after writes. For
 important output, export PNG and run visual QA.
